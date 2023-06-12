@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
+body{
+    margin: 0;
+    font-family:'Trebuchet MS';
+    background-color: rgb(13, 11, 11);
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pads{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: rgb(13, 11, 11); 
+    margin: 50px;
+    height: 200px;
+    width: 250px;
+    border-radius: 2px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.pads.clicked{
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    animation: shadowEffect 0.2s forwards;
+}
+
+@keyframes shadowEffect {
+    0% { box-shadow: 0 0 10px rgba(255, 255, 255, 1); }
+    100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+}
+
+
+.title{
+    margin: 0px 10px;
+    text-align: left;
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(228, 228, 228);
+}
+
+#pad1{
+    background-color: rgb(85, 187, 85);
+}
+
+#pad2{
+    background-color: rgb(145, 30, 30);
+}
+
+#pad3{
+    background-color: rgb(31, 31, 94);
+}
+
+#pad4{
+    background-color: rgb(255, 255, 0);
+}
+
+#pad5{
+    background-color: orange;
+}
+
+#pad6{
+    background-color: purple;
+}
+
+
+
