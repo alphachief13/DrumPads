@@ -27,6 +27,10 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.pads:hover{
+    cursor: pointer;
+}
+
 .pads.clicked{
     box-shadow: 0 0 10px rgba(255, 255, 255, 1);
     animation: shadowEffect 0.2s forwards;
@@ -37,14 +41,44 @@ body{
     100% { box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
 }
 
+.header{
+    display: flex;
+    color: rgb(228, 228, 228);
+
+}
+
+.header ul{
+    margin-left: 700px;
+
+}
+
+.header ul li{
+    display: inline;
+    font-size: 32px;
+    list-style: none;
+    margin-right: 50px;
+    color: rgb(228, 228, 228);
+}
+
+.header ul li a{
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+}
+
+.header ul li:hover{
+    cursor: pointer;
+    color: rgb(195, 195, 195);
+}
 
 .title{
+    display: flex;
     margin: 0px 10px;
     text-align: left;
     font-size: 50px;
     font-weight: 900;
     color: rgb(228, 228, 228);
 }
+
 
 #pad1{
     background-color: rgb(85, 187, 85);
@@ -70,5 +104,17 @@ body{
     background-color: purple;
 }
 
+.samples{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(228, 228, 228);
+}
 
+.samples ul li{
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+    color: rgb(228, 228, 228);
+}
 

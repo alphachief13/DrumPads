@@ -13,7 +13,7 @@ function brightAnimation(){
     }, 150)
 }
 
-function brilha(element, path){
+function brilha(element){
     element.classList.add("clicked");
     setTimeout(()=>{
         element.classList.remove("clicked");
@@ -58,8 +58,22 @@ pad4.addEventListener("click",  ()=>{
     playAudio("sounds/claps.wav");
 
 });
-pad5.addEventListener("click", brightAnimation);
-pad6.addEventListener("click", brightAnimation);
+pad5.addEventListener("click", ()=>{
+    pad5.classList.add("clicked");
+    setTimeout(()=>{
+        pad5.classList.remove("clicked");
+    }, 150)
+    playAudio("sounds/bass.wav");
+
+});
+pad6.addEventListener("click",  ()=>{
+    pad6.classList.add("clicked");
+    setTimeout(()=>{
+        pad6.classList.remove("clicked");
+    }, 150)
+    playAudio("sounds/convertido.mp3");
+
+});
 
 
 function handleKeyPress(event) {
@@ -84,9 +98,11 @@ function handleKeyPress(event) {
     }
     if (key === "s") {
         brilha(pad5);
+        playAudio("sounds/bass.wav");
     }
     if (key === "d") {
         brilha(pad6);
+        playAudio("sounds/convertido.mp3")
       }
 
   }
