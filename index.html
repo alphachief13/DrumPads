@@ -11,9 +11,17 @@
     <div class="header">
         <h1 class="title">drums</h1>
         <ul>
-            <li>Samples</li>
-            <li><a href="#help">Help</a></li>
-            <li>About</li>
+            
+            <li id="samples">Samples<span class="caret"></span></li>
+            <div class="dropdown">
+                <div class="d-content">
+                    <a href="#" id="m1">Music 1</a>
+                    <a href="#" id="m2">Music 2</a>
+                    <a href="#" id="m3">Music 3</a>
+                </div>
+            </div>
+            
+            
         </ul>
     </div>
     
@@ -24,23 +32,30 @@
         <div class="pads" id="pad2">snare</div>
         <div class="pads" id="pad3">hihat</div>
         <div class="pads" id="pad4">claps</div>
-        <div class="pads" id="pad5">bass I</div>
-        <div class="pads" id="pad6">bass II</div>
+        <div class="pads" id="pad5">cymbal</div>
+        <div class="pads" id="pad6">stop music ||</div>
 
     </div>
 
     <div class="samples">
         <h1>Keys:</h1>
         <ul id="help">
+            <li>|1 -> Music 1|</li>
+            <li>|2 -> Music 2|</li>
+            <li>|3 -> Music 3|</li>
             <li>|Q -> Kick|</li>
             <li>|W -> Snare|</li>
             <li>|E -> Hihat|</li>
             <li>|A -> Claps|</li>
-            <li>|S -> Bass I|</li>
-            <li>|D -> Bass II|</li>
+            <li>|S -> Cymbal|</li>
+            <li>|D -> Stop Music || |</li>
         </ul>
+        
     </div>
 
+    <div class="footer">
+        <p><a href="https://github.com/alphachief13" target="_blank">@alphachief13</a> -> This site may be not optimized for all devices, standard resolution: 1366x768</p>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

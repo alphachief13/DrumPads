@@ -47,14 +47,16 @@ body{
 
 }
 
+
+
 .header ul{
-    margin-left: 700px;
+    margin-left: 800px;
 
 }
 
 .header ul li{
     display: inline;
-    font-size: 32px;
+    font-size: 36px;
     list-style: none;
     margin-right: 50px;
     color: rgb(228, 228, 228);
@@ -109,6 +111,7 @@ body{
     justify-content: center;
     align-items: center;
     color: rgb(228, 228, 228);
+    margin-bottom: 1em;
 }
 
 .samples ul li{
@@ -118,3 +121,52 @@ body{
     color: rgb(228, 228, 228);
 }
 
+.dropdown{
+    display: none;
+}
+
+.d-content{
+
+    padding: 1em;
+}
+
+.d-content a{
+    font-size: 15px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(228, 228, 228);
+    padding: 1em;
+}
+
+.d-content a:hover{
+    opacity: 0.9;
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid rgb(228, 228, 228);
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+
+.girar {
+    transform: rotate(180deg); 
+  }
+
+.footer{
+    color: rgb(228, 228, 228);
+}
+
+.footer *{
+    margin: 0;
+}
+
+.footer a{
+    color: #3aa394;
+}

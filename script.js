@@ -5,6 +5,20 @@ const pad3 = document.getElementById("pad3");
 const pad4 = document.getElementById("pad4");
 const pad5 = document.getElementById("pad5");
 const pad6 = document.getElementById("pad6");
+const samples = document.querySelector("#samples");
+const dropdown = document.querySelector(".dropdown");
+const caret = document.querySelector(".caret");
+const m1 = document.querySelector("#m1");
+const m2 = document.querySelector("#m2");
+const m3 = document.querySelector("#m3");
+let musicas = [];
+let musica1 = new Audio("sounds/piano-loop.wav");
+let musica2 = new Audio("sounds/piano-loop2.wav");
+let musica3 = new Audio("sounds/piano-loop3.wav")
+musicas.push(musica1);
+musicas.push(musica2);
+musicas.push(musica3);
+
 
 function brightAnimation(){
     this.classList.add("clicked");
@@ -63,7 +77,7 @@ pad5.addEventListener("click", ()=>{
     setTimeout(()=>{
         pad5.classList.remove("clicked");
     }, 150)
-    playAudio("sounds/bass.wav");
+    playAudio("sounds/cymbal.wav");
 
 });
 pad6.addEventListener("click",  ()=>{
@@ -71,7 +85,10 @@ pad6.addEventListener("click",  ()=>{
     setTimeout(()=>{
         pad6.classList.remove("clicked");
     }, 150)
-    playAudio("sounds/convertido.mp3");
+    for(let i = 0; i < musicas.length; i++){
+        musicas[i].pause();
+        musicas[i].currentTime = 0;
+    }
 
 });
 
@@ -98,16 +115,71 @@ function handleKeyPress(event) {
     }
     if (key === "s") {
         brilha(pad5);
-        playAudio("sounds/bass.wav");
+        playAudio("sounds/cymbal.wav");
     }
     if (key === "d") {
         brilha(pad6);
-        playAudio("sounds/convertido.mp3")
+        for(let i = 0; i < musicas.length; i++){
+            musicas[i].pause();
+            musicas[i].currentTime = 0;
+        }
       }
+
+    if(key === "1"){
+        if(musica1.paused && musica2.paused && musica3.paused){
+            musica1.play();
+            dropdown.style.display = "none";
+        }
+    }
+
+    if(key === "2"){
+        if(musica1.paused && musica2.paused && musica3.paused){
+            musica2.play();
+            dropdown.style.display = "none";
+        }
+    }
+
+    if(key === "3"){
+        if(musica1.paused && musica2.paused && musica3.paused){
+            musica3.play();
+            dropdown.style.display = "none";
+        }
+    }
+
 
   }
   
 document.addEventListener("keydown", handleKeyPress);
 
+samples.addEventListener("click", ()=>{
+    if(dropdown.style.display === "block"){
+        dropdown.style.display = "none";
+        caret.classList.remove("girar")
 
+    } else{
+        dropdown.style.display = "block";
+        caret.classList.add("girar")
+    }
+});
+
+m1.addEventListener("click", ()=>{
+    if(musica1.paused && musica2.paused && musica3.paused){
+        musica1.play();
+        dropdown.style.display = "none";
+    }
+});
+
+m2.addEventListener("click", ()=>{
+    if(musica1.paused && musica2.paused && musica3.paused){
+        musica2.play();
+        dropdown.style.display = "none";
+    }
+});
+
+m3.addEventListener("click", ()=>{
+    if(musica1.paused && musica2.paused && musica3.paused){
+        musica3.play();
+        dropdown.style.display = "none";
+    }
+});
 
